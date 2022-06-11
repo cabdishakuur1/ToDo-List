@@ -1,0 +1,126 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f1f1f1;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+form {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  gap: 10px;
+  background-color: #ededed;
+  border-radius: 10px;
+}
+form .task-value {
+  font-family: inherit;
+  padding: 12px 16px;
+  font-size: 1.5em;
+  background-color: #fff;
+  color: #2196f3;
+  caret-color: #2196f3;
+  border-radius: 7px;
+  border: 2px solid #2196f3;
+  outline: none;
+  flex-grow: 1;
+}
+form .add-task {
+  border-radius: 7px;
+  border: 2px solid #2196f3;
+  background-color: #2196f3;
+  color: white;
+  font-size: 1.5em;
+  padding: 12px 16px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form .add-task:hover {
+  opacity: 1;
+}
+.tasks {
+  background-color: #e9e9e9;
+  border-radius: 10px;
+  padding: 12px 16px;
+  line-height: 1.6em;
+  margin: 30px auto;
+}
+.tasks .task {
+  background-color: #dededd;
+  padding: 12px 16px;
+  margin: 15px auto;
+  font-size: 1.2em;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.tasks .task:hover {
+  opacity: 1;
+}
+.tasks .task.done {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.tasks .task .text {
+  flex-grow: 1;
+}
+.tasks .task .del {
+  background-color: #f44336;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 16px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tasks .task .del:hover {
+  opacity: 1;
+}
+.del-all {
+  width: fit-content;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  padding: 10px 16px;
+  border-radius: 7px;
+  margin: 10px auto;
+  display: block;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.del-all:hover {
+  opacity: 1;
+}
