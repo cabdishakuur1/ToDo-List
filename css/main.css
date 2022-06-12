@@ -75,6 +75,7 @@ form .add-task:hover {
   padding: 12px 16px;
   line-height: 1.6em;
   margin: 30px auto;
+  max-width: 800px;
 }
 .tasks .task {
   background-color: #dededd;
