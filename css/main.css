@@ -74,6 +74,11 @@ form .add-task {
 form .add-task:hover {
   opacity: 1;
 }
+.tasks-count {
+  text-align: center;
+  padding: 20px 0 0;
+  font-size: 20px;
+}
 .tasks {
   background-color: #e9e9e9;
   border-radius: 10px;

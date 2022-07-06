@@ -2,6 +2,7 @@ let taskInput = document.querySelector(".task-value");
 let btnAddTask = document.querySelector(".add-task");
 let tasksBox = document.querySelector(".tasks");
 let btnRemoveAll = document.querySelector(".del-all");
+let tasksCount = document.querySelector(".tasks-count");
 
 // Empty Array To Store The Tasks List
 let taskList = [];
@@ -41,6 +42,7 @@ tasksBox.addEventListener("click", function (e) {
     // Remove Task form Page
     e.target.parentElement.remove();
   }
+  updateTaskCount();
 });
 
 // Remove All Tasks
@@ -48,6 +50,7 @@ btnRemoveAll.onclick = function () {
   tasksBox.innerHTML = "";
   taskList = [];
   localStorage.setItem("tasks", "");
+  updateTaskCount();
 };
 
 /* Functions */
@@ -61,6 +64,7 @@ function addTaskToList(value) {
   taskList.push(task);
   addTasksToView(taskList); // Add Tasks To Page
   addTasklocalStorage(taskList); // Add Tasks to localStorage
+  updateTaskCount();
 }
 
 function addTasksToView(list) {
@@ -90,6 +94,8 @@ function addTasksToView(list) {
 
     // add Task To Tasks Container
     tasksBox.prepend(div);
+    // Update Count Tasks
+    updateTaskCount();
   });
 }
 
@@ -109,4 +115,7 @@ function changeStatusWith(id) {
 function removeTaskWith(id) {
   taskList = taskList.filter((task) => task.taskId != id);
   addTasklocalStorage(taskList);
+}
+function updateTaskCount() {
+  tasksCount.textContent = `Task: (${taskList.length})`;
 }
